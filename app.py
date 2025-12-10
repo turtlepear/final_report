@@ -25,18 +25,18 @@ except LookupError:
     nltk.download('punkt')
 
 # --- 頁面設定 ---
-st.set_page_config(page_title="YouTube 輿情與 LSTM 流量預測系統", layout="wide")
+st.set_page_config(page_title="YouTube 情感分析與 LSTM 流量預測系統", layout="wide")
 
-st.title("📊 YouTube 輿情分析與 LSTM 流量預測系統")
-st.markdown("""
-本系統整合 **NLP 輿情分析**與 **PyTorch LSTM** 模型。
-**預測設定：** 使用所有歷史數據進行訓練，並固定預測**未來 30 天**的趨勢。
-""")
+st.title("📊 YouTube 情感分析與 LSTM 流量預測系統")
+# st.markdown("""
+# 本系統整合 **NLP 情感分析**與 **PyTorch LSTM** 模型。
+# **預測設定：** 使用所有歷史數據進行訓練，並固定預測**未來 30 天**的趨勢。
+# """)
 
 # --- 側邊欄：設定 ---
 st.sidebar.header("⚙️ 參數設定")
 api_key = st.sidebar.text_input("輸入 YouTube Data API Key", type="password")
-video_input = st.sidebar.text_input("輸入 YouTube 影片 ID 或網址", value="gMh_f4goUIY")
+video_input = st.sidebar.text_input("輸入 YouTube 影片 ID 或網址", value="fB8TyLTD7EE")
 max_results = st.sidebar.slider("抓取評論數量上限 (最大 50000 筆)", 100, 50000, 50000)
 # 固定預測期為 30 天
 FORECAST_PERIOD = 30 
@@ -408,4 +408,5 @@ if st.sidebar.button("開始分析流程"):
                  pass
 
 else:
+
     st.info("👈 請在側邊欄輸入資料並點擊按鈕，開始多模型分析。")
