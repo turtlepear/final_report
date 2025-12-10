@@ -1,0 +1,12 @@
+streamlit
+pandas
+numpy
+plotly
+matplotlib
+google-api-python-client
+textblob
+scikit-learn
+nltk
+prophet
+statsmodels
+torch
