@@ -1,8 +1,8 @@
 # final_report
-# 📊 YouTube 輿情分析與三模型流量預測系統
+# 📊 YouTube 輿情分析與模型評論預測系統
 
 
-本專案是一個基於 **Streamlit** 的整合式數據分析平台，旨在分析 YouTube 影片的觀眾輿情（NLP），並利用三種不同的時間序列模型（**PyTorch LSTM**）來預測影片的流量趨勢（觀看次數）。
+本專案是一個基於 **Streamlit** 的整合式數據分析平台，旨在分析 YouTube 影片的觀眾輿情（NLP），並利用時間序列模型（**PyTorch LSTM**）來預測影片的評論趨勢（評論次數）。
 
 streamlit demo web : https://finalreport-y7jesuwanunnfnhwuozy3t.streamlit.app/
 
@@ -17,7 +17,7 @@ streamlit demo web : https://finalreport-y7jesuwanunnfnhwuozy3t.streamlit.app/
 ### 2. NLP 輿情分析 (Sentiment Analysis & NLP)
 * **情感分析**：使用 TextBlob 分析評論的情感極性（正面/負面/中立）。
 * **主題建模**：使用 NMF (Non-negative Matrix Factorization) 提取評論中的關鍵主題。
-* **關聯分析**：視覺化「情感分數」與「評論數量/觀看流量」之間的相關性與滯後效應。
+* **關聯分析**：視覺化「情感分數」與「評論數量」之間的相關性與滯後效應。
 
 ### 3. 多模型流量預測 (Time Series Forecasting)
 所有模型皆採用 **80% 訓練集 / 20% 測試集** 的嚴謹切分方式進行評估：
@@ -62,6 +62,7 @@ streamlit run app.py
 ### 2. 操作介面設定 (側邊欄)
 1.  **輸入 API Key**：貼上您的 YouTube Data API Key。
 2.  **輸入影片 ID**：貼上 YouTube 影片網址或 ID (用於抓取評論進行 NLP 分析)。
+3.  **評論抓取數量** : 100 ~ 50000筆
 
 ### 3. 開始分析
 點擊側邊欄的 **「開始分析流程」** 按鈕，系統將自動執行並生成三個分頁報告。
