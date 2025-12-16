@@ -3,6 +3,7 @@
 
 
 本專案是一個基於 **Streamlit** 的整合式數據分析平台，旨在分析 YouTube 影片的觀眾輿情（NLP），並利用三種不同的時間序列模型（**PyTorch LSTM**）來預測影片的流量趨勢（觀看次數）。
+
 streamlit demo web : https://finalreport-y7jesuwanunnfnhwuozy3t.streamlit.app/
 
 
