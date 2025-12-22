@@ -87,3 +87,11 @@ streamlit run app.py
 ├── requirements.txt        # 依賴套件清單
 └── README.md               # 專案說明文件
 ```
+
+
+## demo影片
+
+
+https://github.com/user-attachments/assets/a73f6d34-f01a-4e3d-a053-82965eb41596
+
+
